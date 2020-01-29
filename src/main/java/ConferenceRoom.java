@@ -22,4 +22,12 @@ public class ConferenceRoom {
     public String getName() {
         return name;
     }
+
+    public void addGuest(Guest guest) {
+        this.guests.add(guest);
+    }
+
+    public Boolean removeGuest(Guest guest) {
+        return this.guests.remove(guest);
+    }
 }

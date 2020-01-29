@@ -9,11 +9,16 @@ public class GuestTest {
 
     @Before
     public void before(){
-        guest = new Guest("Andrew");
+        guest = new Guest("Andrew", 2);
     }
 
     @Test
     public void hasName(){
         assertEquals("Andrew", guest.getName());
+    }
+
+    @Test
+    public void hasPartySize(){
+        assertEquals(2, guest.getPartySize());
     }
 }

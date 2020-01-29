@@ -4,14 +4,16 @@ public class Bedroom {
 
     private int capacity;
     private int roomNumber;
-    private ArrayList<Guest> guests;
     private String type;
+    private boolean booked;
+    private double rate;
 
-    public Bedroom(int capacity, int roomNumber, String type) {
+    public Bedroom(int capacity, int roomNumber, String type, double rate) {
         this.capacity = capacity;
         this.roomNumber = roomNumber;
-        this.guests = new ArrayList<>();
         this.type = type;
+        this.booked = false;
+        this.rate = rate;
     }
 
     public int getCapacity(){
@@ -22,11 +24,15 @@ public class Bedroom {
         return this.roomNumber;
     }
 
-    public int getRoomGuestCount(){
-        return this.guests.size();
-    }
-
     public String getRoomType(){
         return this.type;
+    }
+
+    public double getRate() {
+        return this.rate;
+    }
+
+    public boolean getBooked() {
+        return this.booked;
     }
 }
